@@ -1,0 +1,9 @@
+html
+    head
+        body
+            h1="Here are all the blogposts on our site"
+            ul
+                each post in posts
+                    h1= post.name
+                    li= post.text
+                    a(href= `/allblogs/${post.id}`) Read More
