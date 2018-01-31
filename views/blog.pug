@@ -1,7 +1,24 @@
-html
-    head
-        body
-            h1= name
-            p= text
-            a(href='/allblogs') Back to all posts
+//-this is the pug template for each individual blog of the travelblog
 
+//- !!todo: check out template inheritance for replacement with extends index.pug?
+
+doctype html
+html
+    
+    head
+        meta(charset="utf-8")
+        title The Mierdas travelblog
+        
+        style(type="text/css").
+          img {
+            width: 400px;
+          }
+  
+    body
+        h1= name
+        p= text
+        br
+        img(src=image)
+        br
+        a(href='/allblogs') 
+            | Back to all posts &raquo;

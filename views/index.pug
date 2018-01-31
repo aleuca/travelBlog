@@ -1,4 +1,17 @@
+//-this is the pug template for the main page of the travelblog
+
+doctype html
 html
+    
     head
-        title= "Intro Page"
-        p= "welcome to the intro page -- there is nothing here yet, but it is the main route, and this is a pug template"
+        meta(charset="utf-8")
+        title The Mierdas travelblog
+    
+    body
+        h1= "Welcome to our travelblog!"
+        h2= "We are The Mierdas - 5 newbie developers studying at the NYCDA in Amsterdam."
+        p= "Bladiebla lalala something about the blog"
+        a(href='/allblogs') 
+            | Read our travelblogs here! &raquo;
+        footer
+          p Copyright &copy; 2018 - The Mierdas

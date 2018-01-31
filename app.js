@@ -9,18 +9,26 @@ const pug = require('pug');
 let blogDatabase = {
     1: {
         id: 1,
-        name: "firstPost",
-        text: "firstPostText"
+        name: "Something about Vienna",
+        text: "Vienna is a really cool city.",
+        image: "http://www.realclearlife.com/wp-content/uploads/2016/11/GettyImages-158534835-1600x1068.jpg"
     },
 
     2: {
         id: 2,
-        name: "secondPost",
-        text: "secondPostText"
+        name: "Some post about Paris",
+        text: "Paris baguette croissant",
+        image: "https://media.architecturaldigest.com/photos/5931758bf368f9234dedb534/master/pass/Paris_Personalities_GettyImages-546896176-2.jpg"
+    },
+
+    3: {
+        id: 3,
+        name: "What's up in Amsterdam",
+        text: "Dutch people smoke tulips",
+        image: "https://www.wallpaperink.co.uk/gallery/shutterstock/cities/Amsterdam_Tulips.jpg"
     }
 }
 
-// Created a route for the bloggersteampage. Its working local on my computer.
 // This is a static page/route to that's why it's made in an html and not in a templating engine
 // Since we also have a dynamic page (the blogposts) we can use PUG there to practive with two different ways of RESpons in Node.js
 

@@ -1,9 +1,33 @@
+//-this is the layout template for the page with a summary of all the blogs
+
+//- !!todo: check out template inheritance for replacement with extends index.pug?
+
+doctype html
 html
+    
     head
-        body
-            h1="Here are all the blogposts on our site"
-            ul
-                each post in posts
-                    h1= post.name
-                    li= post.text
-                    a(href= `/allblogs/${post.id}`) Read More
+        meta(charset="utf-8")
+        title The Mierdas travelblog
+        
+        style(type="text/css").
+            
+            .postblock {
+              display: inline-block;
+              width: 250px;
+            }
+            .postblock img {
+              width: 200px;
+              height: 150px;
+            }
+      
+    body
+        h1="Here are all the blogposts on our site"
+        
+        each post in posts
+            
+            .postblock
+                h3= post.name
+                img(src=post.image)
+                p= post.text
+                a(href= `/allblogs/${post.id}`) 
+                    | Read More &raquo;
