@@ -3,6 +3,7 @@
 // We created a server with Express and stored all the methods in the variable called app
 // Then installed the modules/packages: fs, pug, body-parser, cookie-parser in the appropriate constant variables
 const express = require('express');
+//--const session = require('express-session');
 const app = express();
 const fs = require('fs');
 const pug = require('pug');
@@ -11,6 +12,18 @@ const cookieParser = require('cookie-parser');
 
 //To set the template engine that we are going to use
 app.set('view engine', 'pug');
+//To use body-parser
+//-- app.use(bodyParser.urlencoded({ extended: true }));
+
+//--app.use(session({ 
+//--    secret: 'amber-alert',
+//--    resave: flase, 
+//--    saveUninitialized: false,
+//--    cookie: {
+//--        name: 'trump',
+//--        maxAge: 3600 * 24 * 7
+//--    }
+//--}));
 
 // Variable for the server to listen to a port
 const port = 8080;
@@ -40,9 +53,16 @@ let blogDatabase = {
     }
 }
 
-// GET request for mainpage/route that renders the index pug from the view directory and sends it as html to the client
+// GET request for mainpage/route that renders the index pug from the view directory and sends it as html to the client 
+// Get request for active User ussing express-session
 app.get('/', (req, res) => {
+//--    let activeUser = null;
+//--    if (req.session.activeUser) {
+        // user is logged in
     res.render('index');
+//--    } else {
+    // user is not logged in
+//--    res.render('login');
 });
 
 // GET requeest for allblogpage/route that renders the allblogs pug from the view directory and sends it as html to the client
